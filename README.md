@@ -12,7 +12,7 @@ Exploratory text analysis of **7,701 arXiv AI/ML paper abstracts** (27 Sep 2025 
 | Size | 7,701 rows × 26 columns, no duplicates, no missing abstracts |
 | Period | 27 Sep 2025 – 29 Apr 2026 (a time-bounded sample, not all of arXiv) |
 | Largest primary categories | cs.CV 18.4%, cs.LG 18.1%, cs.CL 14.5%, cs.RO 8.2%, cs.AI 7.2% |
-| Abstract length | mean 180.8, median 180 words |
+| Abstract length | mean 180.8, median 180 words (whitespace tokens of the cleaned text) |
 
 The CSV is not redistributed here; download it from Kaggle (see [Reproduce](#reproduce)).
 
@@ -23,7 +23,7 @@ The CSV is not redistributed here; download it from Kaggle (see [Reproduce](#rep
 3. Term and bigram frequencies (`CountVectorizer`) with extra domain stop words
 4. TF-IDF: mean-weighted distinctive terms and per-abstract top terms
 5. LDA topic model (6 topics, `random_state=42`) with representative abstracts per topic
-6. Phrase-mention shares by year
+6. Phrase-mention shares by submission month (months with at least 100 records)
 7. TF-IDF cosine-similarity search over abstracts
 8. Export of cleaned data and result tables to CSV
 9. *Not run:* `sentence-transformers` embeddings with k-means, and BERTopic
@@ -56,7 +56,8 @@ Topic labels below are my reading of the top terms, not model output; the notebo
 
 ## Limitations
 
-- **No trend claims.** The "2025" group has only 416 records against 7,285 for "2026" because of the collection window. The notebook's year-share table (e.g. "large language model" 13.5% vs 26.7%) compares a late-2025 slice with a mostly-2026 sample and does not show topic growth. See `reports/figures/phrase_trends.png` for the chart this caveat applies to.
+- **No long-term trend claims.** The collection window is under eight months, and the "2025" year label holds only 416 late-2025 records against 7,285 for 2026, so year-on-year comparisons are meaningless. The notebook therefore compares submission *months* (first and last month are partial) and treats the shares as descriptive only.
+- **Pending refresh.** The monthly counts, monthly phrase shares, final summary and dataset-facts cells were added after the original Kaggle run and still need to be executed on the real CSV; their outputs are empty until then.
 - Keyword mentions do not prove a topic is a paper's main contribution.
 - LDA on bag-of-words with generic words such as "model" and "framework" gives overlapping topics. Treat them as a first pass; the embedding and BERTopic sections are the intended next step.
 - Results describe this sample only, not arXiv as a whole.
