@@ -6,7 +6,7 @@ authors:
   - family-names: "Ud Din"
     given-names: "Zain"
     email: "marwatzain8@gmail.com"
-repository-code: "https://github.com/Zain62543/Analyze-Research-Paper-Abstracts-Using-Data-Science-and-NLP"
+repository-code: "https://github.com/Zain62543/arxiv-abstracts-nlp-analysis"
 license: MIT
 keywords:
   - nlp

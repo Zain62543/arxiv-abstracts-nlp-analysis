@@ -143,8 +143,8 @@ For example, the share of abstracts mentioning large language models is 28.0% in
 ## Reproduce
 
 ```bash
-git clone https://github.com/Zain62543/Analyze-Research-Paper-Abstracts-Using-Data-Science-and-NLP.git
-cd Analyze-Research-Paper-Abstracts-Using-Data-Science-and-NLP
+git clone https://github.com/Zain62543/arxiv-abstracts-nlp-analysis.git
+cd arxiv-abstracts-nlp-analysis
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 # download arxiv_ai_ml_papers.csv from Kaggle into data/ (see data/README.md), then set
