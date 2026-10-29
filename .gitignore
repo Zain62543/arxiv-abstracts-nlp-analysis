@@ -1,7 +1,8 @@
 # Data and generated outputs are not tracked
-data/
+data/*
 *.csv
 nlp_analysis_outputs/
 .ipynb_checkpoints/
 __pycache__/
 .venv/
+!data/README.md

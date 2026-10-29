@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this analysis, please cite it as below."
+title: "arXiv AI/ML Research Abstracts: NLP Analysis"
+type: software
+authors:
+  - family-names: "Ud Din"
+    given-names: "Zain"
+    email: "marwatzain8@gmail.com"
+repository-code: "https://github.com/Zain62543/Analyze-Research-Paper-Abstracts-Using-Data-Science-and-NLP"
+license: MIT
+keywords:
+  - nlp
+  - topic-modeling
+  - bertopic
+  - lda
+  - sentence-transformers
+  - arxiv
+date-released: "2026-10-29"

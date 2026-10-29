@@ -147,11 +147,16 @@ git clone https://github.com/Zain62543/Analyze-Research-Paper-Abstracts-Using-Da
 cd Analyze-Research-Paper-Abstracts-Using-Data-Science-and-NLP
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-# download arxiv_ai_ml_papers.csv from Kaggle into notebooks/ (or set FILE_PATH in the first code cell)
+# download arxiv_ai_ml_papers.csv from Kaggle into data/ (see data/README.md), then set
+# FILE_PATH = "../data/arxiv_ai_ml_papers.csv" in the first code cell of the notebook
 jupyter lab notebooks/arxiv_ai_ml_advanced_nlp_research_notebook_cleaned.ipynb
 ```
 
 The embedding and BERTopic sections download `all-MiniLM-L6-v2` on first run and take several minutes on CPU.
+
+## License and citation
+
+Code and notes are released under the [MIT License](LICENSE). The dataset is a third-party Kaggle dataset and keeps its own licence and terms; check them before redistributing the data. See [`CITATION.cff`](CITATION.cff) to cite this work.
 
 ## Author
 
