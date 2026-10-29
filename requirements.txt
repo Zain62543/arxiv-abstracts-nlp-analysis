@@ -3,6 +3,7 @@ pandas>=2.0
 matplotlib>=3.7
 scikit-learn>=1.3
 jupyterlab>=4.0
-Optional, only for sections 13-14 (embeddings and BERTopic):
+# Sections 12-13 (sentence embeddings and BERTopic) were run, so these are required to reproduce them:
 sentence-transformers>=2.7
 bertopic>=0.16
+plotly>=5.0
